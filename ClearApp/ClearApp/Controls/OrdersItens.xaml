@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="ClearApp.Controls.OrdersItens"
+             x:Name="root">
+
+    <Frame BackgroundColor="{StaticResource backgroundList}" Margin="0,5,0,3" Padding="20">
+        <Grid ColumnDefinitions="120, *, auto" RowDefinitions="auto, auto, 1, auto">
+            
+            <Label 
+                Grid.ColumnSpan="2" 
+                TranslationY="2" 
+                Text="{Binding Source={x:Reference root}, Path=Date}"
+                FontSize="12" 
+                TextColor="{StaticResource primaryColor}"/>
+
+            <Image 
+                Grid.Row="1" 
+                HorizontalOptions="Start" 
+                HeightRequest="27" 
+                Source="{Binding Source={x:Reference root}, Path=Logo}"/>
+
+            <Label 
+                Grid.Row="1" 
+                Grid.ColumnSpan="2" 
+                Margin="35,0,0,0" 
+                TextColor="{StaticResource primaryColor}">
+
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span 
+                            Text="{Binding Source={x:Reference root}, Path=Symbol}" 
+                            FontSize="15" 
+                            FontAttributes="Bold"/>
+                        
+                        <Span 
+                            Text="{x:Static system:Environment.NewLine}"/>
+                        
+                        <Span 
+                            Text="{Binding Source={x:Reference root}, Path=Name}" 
+                            FontSize="12"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label 
+                Grid.Column="2" 
+                Grid.RowSpan="2" 
+                VerticalOptions="Center"
+                HorizontalOptions="End" 
+                TextColor="{StaticResource primaryColor}">
+                
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span 
+                            Text="Qtd. "/>
+                        
+                        <Span 
+                            Text="{Binding Source={x:Reference root}, Path=Quantity}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Line 
+                Grid.Row="2" 
+                Grid.ColumnSpan="3" 
+                BackgroundColor="{StaticResource badgeSwingT}"/>
+
+            <StackLayout Margin="0,10,0,0" Grid.Row="3" HorizontalOptions="Start" Orientation="Horizontal">
+                
+                <Button 
+                    Padding="0" 
+                    CornerRadius="3" 
+                    HeightRequest="20" 
+                    WidthRequest="65" 
+                    TextTransform="None" 
+                    FontSize="13" 
+                    TextColor="{StaticResource primaryColor}" 
+                    BackgroundColor="{StaticResource badgeSwingT}">
+                    
+                    <Button.Triggers>
+                        <DataTrigger 
+                            TargetType="Button" 
+                            Binding="{Binding Source={x:Reference root}, Path=ModuleTrigger}" 
+                            Value="Swing Trade">
+                            
+                            <Setter 
+                                Property="Text"
+                                Value="Swing T."/>
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+                
+                <Button 
+                    Padding="0" 
+                    CornerRadius="3" 
+                    HeightRequest="20" 
+                    WidthRequest="65" 
+                    TextTransform="None" 
+                    Text="{Binding Source={x:Reference root}, Path=Status}" 
+                    FontSize="13" 
+                    TextColor="Black" 
+                    BackgroundColor="{StaticResource badgeExecutada}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Column="2" Grid.Row="3" Margin="0,10,0,0">
+                
+                <Label 
+                    TextColor="{StaticResource primaryColor}" 
+                    Text="{Binding Source={x:Reference root}, Path=Type}"/>
+                
+                <Label 
+                    Text="v" 
+                    BackgroundColor="{StaticResource badgeVenda}" 
+                    Padding="5,0" 
+                    TextColor="{StaticResource primaryColor}">
+                    
+                    <Label.Triggers>
+                        <DataTrigger 
+                            TargetType="Label" 
+                            Binding="{Binding Source={x:Reference root}, Path=SideTrigger}" 
+                            Value="Compra">
+                            
+                            <Setter 
+                                Property="Text" 
+                                Value="c"/>
+                            
+                            <Setter 
+                                Property="BackgroundColor" 
+                                Value="{StaticResource badgeCompra}"/>
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+            </StackLayout>
+            
+        </Grid>
+    </Frame>
+    
+</StackLayout>

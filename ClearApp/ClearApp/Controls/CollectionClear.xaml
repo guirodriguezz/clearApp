@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CollectionView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styles="clr-namespace:ClearApp.Resources.Styles"
+             x:Class="ClearApp.Controls.CollectionClear">
+
+    <CollectionView.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <styles:Icons/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </CollectionView.Resources>
+
+    <CollectionView.EmptyView>
+        <StackLayout IsVisible="false" x:Name="emptyView">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Image 
+                    HorizontalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource 
+                            Size="50" 
+                            FontFamily="{StaticResource FontIcon}" 
+                            Glyph="{StaticResource EmptyWallet}"/>
+                    </Image.Source>
+                </Image>
+
+                <Label 
+                    Text="Sem Ordens para mostrar no momento" 
+                    TextColor="{StaticResource primaryColor}"/>
+
+            </StackLayout>
+        </StackLayout>
+    </CollectionView.EmptyView>
+</CollectionView>

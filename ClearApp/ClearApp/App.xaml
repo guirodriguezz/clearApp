@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClearApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <!-- Cores App-->
+            <Color x:Key="primaryColor">#fff</Color>
+            <Color x:Key="backgroundList">#1d262f</Color>
+            <Color x:Key="background">#131a20</Color>
+            <Color x:Key="loginButton">#0404cf</Color>
+            <Color x:Key="badgeCompra">#052fff</Color>
+            <Color x:Key="badgeVenda">#c2052b</Color>
+            <Color x:Key="badgeSwingT">#4d677e</Color>
+            <Color x:Key="badgeExecutada">#7cd444</Color>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

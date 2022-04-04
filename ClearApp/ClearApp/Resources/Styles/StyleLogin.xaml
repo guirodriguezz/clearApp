@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:styles="clr-namespace:ClearApp.Resources.Styles"
+    x:Class="ClearApp.Resources.Styles.StyleLogin">
+
+    <ResourceDictionary.MergedDictionaries>
+        <styles:Icons/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="Image" x:Key="Logo">
+        <Setter Property="Source">
+            <FontImageSource FontFamily="ClearIcons" Glyph="{StaticResource ClearLogo}" Size="150"/>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Label" x:Key="TextAbertura">
+        <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="Padding" Value="0,20"/>
+        <Setter Property="Margin" Value="0,30,35,0"/>
+        <Setter Property="TextColor" Value="{StaticResource primaryColor}"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="TextBemVindo">
+        <Setter Property="Margin" Value="25,80,0,0"/>
+        <Setter Property="TextColor" Value="{StaticResource primaryColor}"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="Button">
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="Padding" Value="0,0,290,0"/>
+        <Setter Property="CornerRadius" Value="4"/>
+        <Setter Property="Margin" Value="20,30"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource loginButton}"/>
+        <Setter Property="TextColor" Value="{StaticResource primaryColor}"/>
+        <Setter Property="TextTransform" Value="None"/>
+    </Style>
+
+</ResourceDictionary>

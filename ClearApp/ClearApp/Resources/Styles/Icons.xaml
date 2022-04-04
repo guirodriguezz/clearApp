@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ClearApp.Resources.Styles.Icons">
+
+    <OnPlatform x:TypeArguments="x:String" x:Key="FontIcon">
+        <On Platform="Android" Value="ClearIcons"/>
+        <On Platform="iOS" Value="ClearIcons"/>
+    </OnPlatform>
+
+    <!--Icones-->
+    <x:String x:Key="ClearLogo">&#x0041;</x:String>
+    <x:String x:Key="Logout">&#x0042;</x:String>
+    <x:String x:Key="EmptyWallet">&#x0043;</x:String>
+    <x:String x:Key="LeftArrow">&#x0044;</x:String>
+
+</ResourceDictionary>

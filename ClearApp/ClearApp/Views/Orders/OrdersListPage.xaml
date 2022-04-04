@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ClearApp.Controls"
+             xmlns:viewModel="clr-namespace:ClearApp.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+             BackButton="False"
+             x:Class="ClearApp.Views.Orders.OrdersListPage">
+
+    <controls:BasePage.BindingContext>
+        <viewModel:OrdersListViewModel/>
+    </controls:BasePage.BindingContext>
+
+    <controls:BasePage.Body>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+
+            <controls:CollectionClear ItemsSource="{Binding OrdersList}" OrdersEmpty="True">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:OrdersItens 
+                            Date="{Binding CreatedAt}" 
+                            Logo="{Binding Logo}" 
+                            Name="{Binding Name}" 
+                            Symbol="{Binding Symbol}"
+                            Quantity="{Binding Quantity}"
+                            Status="{Binding Status}"
+                            ModuleTrigger="{Binding Module}"
+                            Type="{Binding Type}"
+                            SideTrigger="{Binding Side}"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </controls:CollectionClear>
+            
+        </RefreshView>
+    </controls:BasePage.Body>
+</controls:BasePage>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styles="clr-namespace:ClearApp.Resources.Styles"
+             x:Class="ClearApp.Controls.BasePage"
+             BackgroundColor="{StaticResource background}">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <styles:Icons/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <StackLayout x:Name="basePageContent">
+            <Grid ColumnDefinitions="auto, *, auto" RowDefinitions="auto, 1" Margin="20,25,20,0">
+
+                <Image 
+                    x:Name="backButton" 
+                    Grid.Column="0" 
+                    HorizontalOptions="End" 
+                    VerticalOptions="End" 
+                    TranslationY="-12">
+                    <Image.Source>
+                        <FontImageSource 
+                            FontFamily="{StaticResource FontIcon}" 
+                            Glyph="{StaticResource LeftArrow}" 
+                            Size="20"/>
+                    </Image.Source>
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Voltar"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label 
+                    HorizontalOptions="Center"  
+                    Grid.ColumnSpan="2" 
+                    Text="Ordens" 
+                    FontSize="20" 
+                    FontAttributes="Bold" 
+                    TextColor="{StaticResource primaryColor}"/>
+                
+                <Label 
+                    HorizontalOptions="Center" 
+                    Grid.ColumnSpan="2" 
+                    Margin="0,25,0,0" 
+                    Text="Swing Trade" 
+                    FontSize="15" 
+                    TextColor="{StaticResource primaryColor}"/>
+
+                <Image 
+                    Grid.Column="1"
+                    HorizontalOptions="End" 
+                    VerticalOptions="End" 
+                    TranslationY="-10">
+                    <Image.Source>
+                        <FontImageSource 
+                            FontFamily="{StaticResource FontIcon}" 
+                            Glyph="{StaticResource Logout}" 
+                            Size="25"/>
+                    </Image.Source>
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Logout"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Line 
+                    Grid.ColumnSpan="2"
+                    Grid.Row="1" 
+                    Margin="125,0" 
+                    BackgroundColor="{StaticResource loginButton}"/>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
