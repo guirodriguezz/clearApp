@@ -40,7 +40,6 @@ namespace ClearApp.ViewModels
         public void GoOrdersList()
         {
             SharedHelper.LoggedUser = "Logged";
-
             Application.Current.MainPage = new NavigationPage(new OrdersListPage());
         }
         #endregion

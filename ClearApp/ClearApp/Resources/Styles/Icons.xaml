@@ -14,5 +14,8 @@
     <x:String x:Key="Logout">&#x0042;</x:String>
     <x:String x:Key="EmptyWallet">&#x0043;</x:String>
     <x:String x:Key="LeftArrow">&#x0044;</x:String>
+    <x:String x:Key="Subtraction">&#x0045;</x:String>
+    <x:String x:Key="Plus">&#x0046;</x:String>
+    <x:String x:Key="Completing">&#x0047;</x:String>
 
 </ResourceDictionary>

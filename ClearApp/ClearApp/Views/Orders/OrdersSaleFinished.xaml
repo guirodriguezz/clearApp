@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styles="clr-namespace:ClearApp.Resources.Styles"
+             xmlns:viewModel="clr-namespace:ClearApp.ViewModels"
+             x:Class="ClearApp.Views.Orders.OrdersSaleFinished"
+             BackgroundColor="{StaticResource primaryColor}">
+
+    <ContentPage.BindingContext>
+        <viewModel:OrdersSaleFinishedViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <styles:Icons/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Parabéns! Venda concluída com sucesso" HorizontalTextAlignment="Center" Margin="50,90,50,0" FontSize="20" TextColor="Black"/>
+            
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Image Source="Completing.png" HeightRequest="250"/>
+            </StackLayout>
+
+            <Button
+                AutomationProperties.IsInAccessibleTree="true" 
+                AutomationProperties.HelpText="Clique aqui para fechar tela e retornar para lista de ordens"
+                VerticalOptions="EndAndExpand" 
+                BackgroundColor="{StaticResource loginButton}" 
+                Margin="50,0,50,30" 
+                CornerRadius="10" 
+                Text="Fechar" 
+                TextColor="{StaticResource primaryColor}"
+                Command="{Binding BackOrdersListCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

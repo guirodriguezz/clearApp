@@ -26,7 +26,9 @@
                 Grid.ColumnSpan="2" 
                 Style="{DynamicResource Logo}"/>
 
-            <Label 
+            <Label
+                AutomationProperties.IsInAccessibleTree="true"
+                AutomationProperties.HelpText="Toque aqui para abrir sua conta"
                 Grid.Column="2" 
                 Text="Abra sua conta" 
                 Style="{DynamicResource TextAbertura}">
@@ -56,7 +58,9 @@
                 
             </Label>
 
-            <Button 
+            <Button
+                AutomationProperties.IsInAccessibleTree="true"
+                AutomationProperties.HelpText="Clique aqui para logar no aplicativo"
                 Grid.Row="2" 
                 Grid.ColumnSpan="3"
                 Style="{DynamicResource Button}"

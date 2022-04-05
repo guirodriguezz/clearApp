@@ -56,7 +56,7 @@ namespace ClearApp.Controls
         #region Methods
         private async void Logout(object sender, System.EventArgs e)
         {
-            UserDialogs.Instance.ShowLoading("Aguarde...");
+            UserDialogs.Instance.ShowLoading("Carregando tela");
 
             await Task.Delay(TimeSpan.FromSeconds(1));
 

@@ -14,5 +14,7 @@ namespace ClearApp.Models.Orders
         public string Status { get; set; }
         public string Logo { get; set; }
         public string Id { get; set; }
+        public decimal PriceOrder { get; set; } = 650;
+        public decimal Tax { get; set; } = 005;
     }
 }

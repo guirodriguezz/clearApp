@@ -31,7 +31,7 @@ namespace ClearApp
             bool loggedUser = SharedHelper.ContainsLoggedUser();
 
             if (loggedUser) 
-                MainPage = new OrdersListPage();
+                MainPage = new NavigationPage(new OrdersListPage());
             else 
                 MainPage = new LoginPage();
         }

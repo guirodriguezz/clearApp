@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styles="clr-namespace:ClearApp.Resources.Styles"
+             x:Class="ClearApp.Controls.EntryClearOrder"
+             x:Name="root">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <styles:Icons/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <Grid RowDefinitions="auto, auto">
+        <Entry 
+            x:Name="entryWithoutLine"
+            Text="{Binding Source={x:Reference root}, Path=Text}"
+            Margin="70,30,70,0"
+            Keyboard="Numeric"
+            HorizontalTextAlignment="Center"
+            TextColor="{StaticResource primaryColor}"
+            FontSize="30"
+            Unfocused="EntryWithoutLine_Unfocused"/>
+
+        <Image HorizontalOptions="Start" Margin="45,33,0,0" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.HelpText="Clique aqui para retirar unidades da compra">
+            <Image.Source>
+                <FontImageSource 
+                    FontFamily="{StaticResource FontIcon}" 
+                    Glyph="{StaticResource Subtraction}"
+                    Color="{Binding Source={x:Reference root}, Path=SubtractColor}"
+                    Size="20"/>
+            </Image.Source>
+
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Subtract_Tapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image HorizontalOptions="End" Margin="0,30,45,0" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.HelpText="Clique aqui para adicionar unidades da compra">
+            <Image.Source>
+                <FontImageSource 
+                    FontFamily="{StaticResource FontIcon}" 
+                    Glyph="{StaticResource Plus}"
+                    Color="{Binding Source={x:Reference root}, Path=AddColor}"
+                    Size="20"/>
+            </Image.Source>
+
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Add_Tapped"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Line
+            Grid.Row="1"
+            Margin="40,0,40,0"
+            HeightRequest="1.1" 
+            BackgroundColor="{StaticResource primaryColor}"/>
+    </Grid>
+</ContentView>

@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using ClearApp.Models.Orders;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace ClearApp.Helpers
@@ -21,6 +24,21 @@ namespace ClearApp.Helpers
 
         public static void RemoveLogged() => Preferences.Remove(nameof(LoggedUser));
         public static bool ContainsLoggedUser() => Preferences.ContainsKey(nameof(LoggedUser));
+
+        public static Task<string> OrdersListCached
+        {
+            get
+            {
+                var savedList = SecureStorage.GetAsync(nameof(OrdersListCached));
+                return savedList;
+            }
+            set
+            {
+                SecureStorage.SetAsync(nameof(OrdersListCached), value.Result);
+            }
+        }
+
+        public static void RemoveOrdersCached() => Preferences.Remove(nameof(OrdersListCached));
 
         #region Config
         static T Deserialize<T>(string serializedObject) => JsonConvert.DeserializeObject<T>(serializedObject);

@@ -19,7 +19,9 @@
             <Grid ColumnDefinitions="auto, *, auto" RowDefinitions="auto, 1" Margin="20,25,20,0">
 
                 <Image 
-                    x:Name="backButton" 
+                    x:Name="backButton"
+                    AutomationProperties.IsInAccessibleTree="true"
+                    AutomationProperties.HelpText="Clique aqui para voltar a tela anterior"
                     Grid.Column="0" 
                     HorizontalOptions="End" 
                     VerticalOptions="End" 
@@ -52,7 +54,9 @@
                     FontSize="15" 
                     TextColor="{StaticResource primaryColor}"/>
 
-                <Image 
+                <Image
+                    AutomationProperties.IsInAccessibleTree="true"
+                    AutomationProperties.HelpText="Clique aqui para deslogar do aplicativo"
                     Grid.Column="1"
                     HorizontalOptions="End" 
                     VerticalOptions="End" 
