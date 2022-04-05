@@ -5,7 +5,7 @@
              xmlns:system="clr-namespace:System;assembly=netstandard"
              xmlns:controls="clr-namespace:ClearApp.Controls"
              xmlns:converters="clr-namespace:ClearApp.Converters"
-             xmlns:viewModel="clr-namespace:ClearApp.ViewModels" x:DataType="viewModel:OrdersDetailsViewModel"
+             xmlns:viewModel="clr-namespace:ClearApp.ViewModels.Orders" x:DataType="viewModel:OrdersDetailsViewModel"
              x:Class="ClearApp.Views.Orders.OrdersDetailsPage">
 
     <ContentPage.Resources>

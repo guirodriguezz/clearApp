@@ -1,6 +1,4 @@
-﻿using ClearApp.Models.Orders;
-using Newtonsoft.Json;
-using System.Collections.ObjectModel;
+﻿using Newtonsoft.Json;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 

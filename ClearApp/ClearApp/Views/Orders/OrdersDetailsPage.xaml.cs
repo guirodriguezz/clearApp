@@ -1,6 +1,6 @@
 ﻿using ClearApp.Controls;
 using ClearApp.Models.Orders;
-using ClearApp.ViewModels;
+using ClearApp.ViewModels.Orders;
 using Xamarin.Forms.Xaml;
 
 namespace ClearApp.Views.Orders

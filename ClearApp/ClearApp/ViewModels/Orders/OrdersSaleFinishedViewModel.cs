@@ -3,7 +3,7 @@ using MvvmHelpers;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace ClearApp.ViewModels
+namespace ClearApp.ViewModels.Orders
 {
 
     public class OrdersSaleFinishedViewModel : BaseViewModel

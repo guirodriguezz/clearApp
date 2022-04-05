@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace ClearApp.ViewModels
+namespace ClearApp.ViewModels.OpenArea
 {
     public class LoginViewModel : BaseViewModel
     {
