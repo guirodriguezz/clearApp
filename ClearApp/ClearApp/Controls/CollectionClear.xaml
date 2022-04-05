@@ -22,7 +22,8 @@
                         <FontImageSource 
                             Size="50" 
                             FontFamily="{StaticResource FontIcon}" 
-                            Glyph="{StaticResource EmptyWallet}"/>
+                            Glyph="{StaticResource EmptyWallet}"
+                            Color="{StaticResource primaryColor}"/>
                     </Image.Source>
                 </Image>
 

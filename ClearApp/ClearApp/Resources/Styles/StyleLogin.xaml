@@ -11,7 +11,7 @@
     
     <Style TargetType="Image" x:Key="Logo">
         <Setter Property="Source">
-            <FontImageSource FontFamily="ClearIcons" Glyph="{StaticResource ClearLogo}" Size="150"/>
+            <FontImageSource FontFamily="ClearIcons" Glyph="{StaticResource ClearLogo}" Size="150" Color="{StaticResource primaryColor}"/>
         </Setter>
     </Style>
 

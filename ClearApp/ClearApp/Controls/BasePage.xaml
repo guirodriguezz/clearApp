@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:styles="clr-namespace:ClearApp.Resources.Styles"
              x:Class="ClearApp.Controls.BasePage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
              BackgroundColor="{StaticResource background}">
     
     <ContentPage.Resources>
@@ -30,7 +32,8 @@
                         <FontImageSource 
                             FontFamily="{StaticResource FontIcon}" 
                             Glyph="{StaticResource LeftArrow}" 
-                            Size="20"/>
+                            Size="20"
+                            Color="{StaticResource primaryColor}"/>
                     </Image.Source>
 
                     <Image.GestureRecognizers>
@@ -65,7 +68,8 @@
                         <FontImageSource 
                             FontFamily="{StaticResource FontIcon}" 
                             Glyph="{StaticResource Logout}" 
-                            Size="25"/>
+                            Size="25"
+                            Color="{StaticResource primaryColor}"/>
                     </Image.Source>
 
                     <Image.GestureRecognizers>
