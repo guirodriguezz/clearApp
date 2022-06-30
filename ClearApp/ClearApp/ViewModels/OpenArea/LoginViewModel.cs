@@ -32,12 +32,12 @@ namespace ClearApp.ViewModels.OpenArea
         #endregion
 
         #region Methods
-        public async Task AbrirConta()
+        private async Task AbrirConta()
         {
             await OpenBrowserHelper.OpenClearConta();
         }
 
-        public void GoOrdersList()
+        private static void GoOrdersList()
         {
             SharedHelper.LoggedUser = "Logged";
             Application.Current.MainPage = new NavigationPage(new OrdersListPage());

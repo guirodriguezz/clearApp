@@ -66,6 +66,32 @@
                 Style="{DynamicResource Button}"
                 Text="Login"  
                 Command="{Binding GoOrdersListCommand}"/>
+
+            <StackLayout Grid.Row="3">
+                <Frame
+                    x:Name="frameCircle"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    HasShadow="False"
+                    WidthRequest="64"
+                    HeightRequest="64"
+                    CornerRadius="32"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Blue"
+                    IsClippedToBounds="True"
+                    Padding="0">
+
+                </Frame>
+
+                <Label
+                    x:Name="title"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Text="Teste"
+                    FontSize="12"
+                    LineHeight="18"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#FFF"/>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
